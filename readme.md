@@ -8,7 +8,7 @@
 
 #### 1. To create a user
 
-#### http://localhost:5000/users
+#### https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users
 
 #### Method: Post
 
@@ -24,7 +24,7 @@
 
 #### 2. To Login
 
-#### http://localhost:5000/users/login
+#### https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/login
 
 #### Method: Post
 
@@ -36,7 +36,7 @@
 
 #### 3. Retrieve a specific user by username
 
-#### http://localhost:5000/users/< username >/
+#### https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/< username >/
 
 #### E.g: https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/mofizz
 
@@ -44,32 +44,32 @@
 
 #### 4. Retrieve a list of followers for a specific user
 
-#### http://localhost:5000/users/< username >/followers
+#### https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/< username >/followers
 
-#### E.g: http://localhost:5000/users/mofizz/followers
+#### E.g: https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/mofizz/followers
 
 #### Method: Get
 
 #### 5. Retrieve a list of users a specific user is following
 
-#### http://localhost:5000/users/< username >/following
+#### https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/< username >/following
 
-#### E.g: http://localhost:5000/users/mofizz/following
+#### E.g: https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/mofizz/following
 
 #### Method: Get
 
 #### 6. Follow a specific user
 
-#### http://localhost:5000/users/< username >/follow
+#### https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/< username >/follow
 
-#### E.g: http://localhost:5000/users/kkkhg/follow
+#### E.g: https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/kkkhg/follow
 
 #### Method: Post
 
 #### 7. Unfollow a specific user
 
-#### http://localhost:5000/users/< username >/follow
+#### https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/< username >/follow
 
-#### E.g: http://localhost:5000/users/kkkhg/follow
+#### E.g: https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/kkkhg/follow
 
 #### Method: Delete
