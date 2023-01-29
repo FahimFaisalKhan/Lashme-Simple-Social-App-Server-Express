@@ -7,6 +7,63 @@
     <title>Document</title>
   </head>
   <body>
-    Express runninng
+    <h1>These are some demo api calls you can make:</h1>
+    <div>
+      <br /><br />
+      <h2>1. To create a user</h2>
+      <h2>http://localhost:5000/users</h2>
+      <h3>Method: Post</h3>
+
+      <p>
+        <strong>Inside request body add the following parameters :</strong>
+        <br />
+        username <br />password <br />email <br />
+        fullname
+      </p>
+    </div>
+    <div>
+      <br /><br />
+      <h2>2. To Login</h2>
+      <h2>http://localhost:5000/users/login</h2>
+      <h3>Method: Post</h3>
+
+      <p>
+        <strong>Inside request body add the following parameters :</strong>
+        <br />
+        password <br />email
+      </p>
+    </div>
+    <div>
+      <br /><br />
+      <h2>3. Retrieve a list of followers for a specific user</h2>
+      <h2>http://localhost:5000/users/< username >/followers</h2>
+      <br />
+      <p>E.g: http://localhost:5000/users/mofizz/followers</p>
+      <h3>Method: Get</h3>
+    </div>
+    <div>
+      <br /><br />
+      <h2>4. Retrieve a list of users a specific user is following</h2>
+      <h2>http://localhost:5000/users/< username >/following</h2>
+      <br />
+      <p>E.g: http://localhost:5000/users/mofizz/following</p>
+      <h3>Method: Get</h3>
+    </div>
+    <div>
+      <br /><br />
+      <h2>5. Follow a specific user</h2>
+      <h2>http://localhost:5000/users/< username >/follow</h2>
+      <br />
+      <p>E.g: http://localhost:5000/users/kkkh/follow</p>
+      <h3>Method: Post</h3>
+    </div>
+    <div>
+      <br /><br />
+      <h2>6. Unfollow a specific user</h2>
+      <h2>http://localhost:5000/users/< username >/follow</h2>
+      <br />
+      <p>E.g: http://localhost:5000/users/kkkhg/follow</p>
+      <h3>Method: Delete</h3>
+    </div>
   </body>
 </html>

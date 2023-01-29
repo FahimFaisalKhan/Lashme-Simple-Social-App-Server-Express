@@ -7,8 +7,8 @@ const userSchema = new Schema({
   fullname: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
-  followers: [String],
-  following: [String],
+  followers: { required: false, type: [String] },
+  following: { required: false, type: [String] },
 });
 
 const User = mongoose.model("User", userSchema);

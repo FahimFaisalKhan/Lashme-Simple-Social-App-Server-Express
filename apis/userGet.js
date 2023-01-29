@@ -15,7 +15,10 @@ exports.followers = async (req, res) => {
     followers: 1,
     _id: 0,
   });
-  res.send(result);
+  const usersFollowers = await User.find({
+    username: { $in: result?.followers },
+  });
+  res.send(usersFollowers);
 };
 exports.following = async (req, res) => {
   const { username } = req.params;
@@ -23,5 +26,9 @@ exports.following = async (req, res) => {
     following: 1,
     _id: 0,
   });
-  res.send(result);
+  const usersFollowing = await User.find({
+    username: { $in: result?.following },
+  });
+
+  res.send(usersFollowing);
 };
