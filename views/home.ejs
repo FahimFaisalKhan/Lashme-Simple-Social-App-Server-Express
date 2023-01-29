@@ -7,7 +7,14 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>These are some demo api calls you can make:</h1>
+    <h1>
+      These are some demo api calls you can make:
+      <br />
+      To follow/unfollow user you need to be logged in, otherwise
+      follow/unfollow routes wont work. So, I suggest you first create a user
+      and then login. <br />
+      Follow the steps in <strong>No. 1 & No. 2</strong> instructions
+    </h1>
     <div>
       <br /><br />
       <h2>1. To create a user</h2>
@@ -35,7 +42,18 @@
     </div>
     <div>
       <br /><br />
-      <h2>3. Retrieve a list of followers for a specific user</h2>
+      <h2>3. Retrieve a specific user by username</h2>
+      <h2>http://localhost:5000/users/< username >/</h2>
+      <br />
+      <p>
+        E.g:
+        https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/mofizz
+      </p>
+      <h3>Method: Get</h3>
+    </div>
+    <div>
+      <br /><br />
+      <h2>4. Retrieve a list of followers for a specific user</h2>
       <h2>http://localhost:5000/users/< username >/followers</h2>
       <br />
       <p>E.g: http://localhost:5000/users/mofizz/followers</p>
@@ -43,7 +61,7 @@
     </div>
     <div>
       <br /><br />
-      <h2>4. Retrieve a list of users a specific user is following</h2>
+      <h2>5. Retrieve a list of users a specific user is following</h2>
       <h2>http://localhost:5000/users/< username >/following</h2>
       <br />
       <p>E.g: http://localhost:5000/users/mofizz/following</p>
@@ -51,7 +69,7 @@
     </div>
     <div>
       <br /><br />
-      <h2>5. Follow a specific user</h2>
+      <h2>6. Follow a specific user</h2>
       <h2>http://localhost:5000/users/< username >/follow</h2>
       <br />
       <p>E.g: http://localhost:5000/users/kkkh/follow</p>
@@ -59,7 +77,7 @@
     </div>
     <div>
       <br /><br />
-      <h2>6. Unfollow a specific user</h2>
+      <h2>7. Unfollow a specific user</h2>
       <h2>http://localhost:5000/users/< username >/follow</h2>
       <br />
       <p>E.g: http://localhost:5000/users/kkkhg/follow</p>
