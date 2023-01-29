@@ -70,6 +70,6 @@
 
 #### https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/< username >/follow
 
-#### E.g: https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/kkkhg/follow
+#### E.g: https://lashme-simple-social-app-fahimfaisalkhan.vercel.app/users/kkkh/follow
 
 #### Method: Delete
