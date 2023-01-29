@@ -14,6 +14,7 @@ initPassport = (passport) => {
       { usernameField: "email", passwordField: "password" },
       // function of username, password, done(callback)
       async (email, password, done) => {
+        console.log(email, password);
         // look for the user data
 
         // if there is an error

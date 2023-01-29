@@ -3,7 +3,7 @@ const User = require("../models/users");
 exports.userSignup = async (req, res) => {
   const { username, password, email, fullname } = req.body;
   try {
-    const docs = await User.find({ username, email });
+    const docs = await User.find({ $or: [{ email }, { username }] });
 
     if (!docs.length) {
       const hashPass = await bcrypt.hash(password, 10);
@@ -14,9 +14,9 @@ exports.userSignup = async (req, res) => {
         fullname,
       });
 
-      res.send({ msg: "Succ created" });
+      res.send({ msg: "User created successfully" });
     } else {
-      res.send({ msg: "already exists" });
+      res.send({ msg: "User already exists" });
     }
   } catch (err) {
     if ((err.name = "ValidationError")) {
@@ -27,8 +27,6 @@ exports.userSignup = async (req, res) => {
   }
 };
 exports.userSignin = async (req, res) => {
-  console.log(req);
-  req.flash("info");
   if (req.user) {
     res.send({ msg: "logged in success ok" });
   } else {

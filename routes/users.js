@@ -1,6 +1,11 @@
 var express = require("express");
 const passport = require("passport");
-const { userSignedinFailed } = require("../apis/userGet");
+const {
+  userSignedinFailed,
+  singleUser,
+  followers,
+  following,
+} = require("../apis/userGet");
 const { userAdd, userSignup, userSignin } = require("../apis/userPost");
 const { rawListeners } = require("../app/app");
 var router = express.Router();
@@ -22,5 +27,7 @@ router.post(
 );
 
 router.get("/loginFailed", userSignedinFailed);
-
+router.get("/:username", singleUser);
+router.get("/:username/followers", followers);
+router.get("/:username/following", following);
 module.exports = router;
