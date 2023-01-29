@@ -4,15 +4,16 @@
  * Module dependencies.
  */
 
-var app = require("./bin/app");
+var app = require("./app/app");
 var debug = require("debug")("lashme-simple-social-app:server");
 var http = require("http");
+const dbconfig = require("./configs/dbconfig");
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || "3000");
+var port = normalizePort(process.env.PORT || "5000");
 app.set("port", port);
 
 /**
@@ -25,9 +26,13 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
-server.on("error", onError);
-server.on("listening", onListening);
+const connection = dbconfig();
+
+if (connection) {
+  server.listen(port);
+  server.on("error", onError);
+  server.on("listening", onListening);
+}
 
 /**
  * Normalize a port into a number, string, or false.
